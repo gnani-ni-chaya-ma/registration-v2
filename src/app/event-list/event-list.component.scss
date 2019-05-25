@@ -1,0 +1,52 @@
+.toolbar-container {
+  display: flex;
+  flex: 1;
+  & span {
+    // color: red;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex: 1;
+  }
+}
+
+.center-aligned {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex: 1;
+}
+
+.action-button-container {
+  display: flex;
+  flex: 1;
+}
+
+.action-buttons {
+  width: 20%;
+  align-items: center;
+  justify-content: space-evenly;
+  display: flex;
+  flex: 1;
+}
+
+.displayed-card {
+  visibility: hidden;
+  :hover {
+    visibility: visible;
+    background-color: white;
+    color: black;
+  }
+}
+
+.show-info-sheet {
+  
+}
+
+.pd-20 {
+  padding: 20px;
+}
+
+.pr-15 {
+  padding-right: 15px;
+}

@@ -1,0 +1,29 @@
+<mat-toolbar class="toolbar-container">
+    <mat-icon>arrow_back</mat-icon>
+    <span>{{headerText}}</span>
+    <!-- <mat-icon matTooltip="REGISTER NOW !">arrow_forward</mat-icon> -->
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+        <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+        <button mat-menu-item>
+            <mat-icon>assignment_turned_in</mat-icon>
+            <span>REGISTER</span>
+        </button>
+        <button mat-menu-item>
+            <mat-icon>color_lens</mat-icon>
+            <span>Change Theme</span>
+        </button>
+    </mat-menu>
+</mat-toolbar>
+<div class="pd-20">
+    <mat-card>
+        <mat-card-header class="center-aligned">
+            <mat-card-title>Ahmedabad -> Age 17 - 21</mat-card-title>
+        </mat-card-header>
+        <mat-card-actions class="show-info-sheet action-button-container">
+            <button mat-raised-button class="action-buttons" (click)="openBottomSheet()" color="accent">INFO</button>
+            <button mat-raised-button class="action-buttons" color="accent">REGISTER</button>
+        </mat-card-actions>
+    </mat-card>
+</div>

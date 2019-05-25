@@ -1,0 +1,12 @@
+<mat-grid-list class="container" cols="2">
+
+  <mat-grid-tile (click)="goToListPage(1)" class="vertical-divider" routerLink="/crisis-center" matRipple
+    [matRippleColor]="rippleColor">
+    Summer Camp
+  </mat-grid-tile>
+
+  <mat-grid-tile (click)="goToListPage(0)" class="vertical-divider" matRipple [matRippleColor]="rippleColor">
+    Yuva Camp
+  </mat-grid-tile>
+
+</mat-grid-list>
