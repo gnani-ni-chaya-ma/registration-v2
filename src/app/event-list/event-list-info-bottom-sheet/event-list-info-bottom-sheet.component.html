@@ -1,15 +1,39 @@
 <div class="page-container">
   <mat-card class="card-container">
     <mat-card-header>
-      <mat-card-title>{{eventData.name}}</mat-card-title>
-      <mat-card-subtitle>{{eventData.age}}</mat-card-subtitle>
+      <mat-card-title></mat-card-title>
+      <mat-card-subtitle>{{eventData.name}} ({{eventData.min_age}} - {{eventData.max_age}})</mat-card-subtitle>
     </mat-card-header>
     <mat-card-content>
-      <mat-list text-center role="list" class="card-list-container" color="primary">
-        <mat-list-item> Pepper </mat-list-item>
-        <mat-list-item> Salt </mat-list-item>
-        <mat-list-item> Paprika </mat-list-item>
-      </mat-list>
+      <div style="width: 50%;">
+        <mat-list>
+          <h3>For :</h3>
+          <mat-list-item>{{eventData.gender}}</mat-list-item>
+          <h3>Start's from :</h3>
+          <mat-list-item>{{eventData.start_date}}</mat-list-item>
+        </mat-list>
+      </div>
+      <div style="width: 50%">
+        <mat-list>
+          <h3>Fees :</h3>
+          <mat-list-item>{{eventData.fees}}</mat-list-item>
+          <h3>Ends's on :</h3>
+          <mat-list-item>{{eventData.end_date}}</mat-list-item>
+        </mat-list>
+      </div>
+      <mat-divider></mat-divider>
+      <div style="width: 100%; flex: 1">
+        <mat-list>
+          <h3>contact on :</h3>
+          <mat-list-item>{{eventData.remarks}}</mat-list-item>
+          <h3>Address :</h3>
+          <mat-list-item *ngIf="eventData.venue.address_1">{{eventData.venue.address_1}}</mat-list-item>
+          <mat-list-item *ngIf="eventData.venue.address_2">{{eventData.venue.address_2}}</mat-list-item>
+          <mat-list-item *ngIf="eventData.venue.city">{{eventData.venue.city}}</mat-list-item>
+          <!-- <mat-list-item *ngIf="eventData.venue.raw">{{eventData.venue.raw}}</mat-list-item> -->
+        </mat-list>
+      </div>
+
     </mat-card-content>
     <button class="center-aligned" mat-raised-button>Register Now !!!</button>
   </mat-card>
