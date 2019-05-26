@@ -1,5 +1,7 @@
 <mat-toolbar class="toolbar-container">
-    <mat-icon>arrow_back</mat-icon>
+    <button mat-icon-button>
+        <mat-icon (click)="goBack()">arrow_back</mat-icon>
+    </button>
     <span>{{headerText}}</span>
     <!-- <mat-icon matTooltip="REGISTER NOW !">arrow_forward</mat-icon> -->
     <button mat-icon-button [matMenuTriggerFor]="menu">
@@ -16,14 +18,18 @@
         </button>
     </mat-menu>
 </mat-toolbar>
-<div class="pd-20">
-    <mat-card>
-        <mat-card-header class="center-aligned">
-            <mat-card-title>Ahmedabad -> Age 17 - 21</mat-card-title>
-        </mat-card-header>
-        <mat-card-actions class="show-info-sheet action-button-container">
-            <button mat-raised-button class="action-buttons" (click)="openBottomSheet()" color="accent">INFO</button>
-            <button mat-raised-button class="action-buttons" color="accent">REGISTER</button>
-        </mat-card-actions>
-    </mat-card>
+<div class="body-container pd-20">
+    <div *ngFor="let list of listDetails">
+        <mat-card class="card-container">
+            <mat-card-header class="center-aligned">
+                <mat-card-title>{{list.name}}</mat-card-title>
+                <mat-card-subtitle>{{list.age}}</mat-card-subtitle>
+                </mat-card-header>
+            <mat-card-actions class="action-button-container">
+                <button mat-raised-button class="action-buttons" (click)="openBottomSheet(list)"
+                    color="accent">INFO</button>
+                <button mat-raised-button class="action-buttons" color="accent">REGISTER</button>
+            </mat-card-actions>
+        </mat-card>
+    </div>
 </div>

@@ -10,7 +10,8 @@ import {
   MatTooltipModule,
   MatCardModule,
   MatBottomSheetModule,
-  MatMenuModule
+  MatMenuModule,
+  MatListModule
 } from '@angular/material';
 
 
@@ -27,7 +28,8 @@ import {
     MatTooltipModule,
     MatCardModule,
     MatBottomSheetModule,
-    MatMenuModule
+    MatMenuModule,
+    MatListModule
   ],
   exports: [
     MatGridListModule,
@@ -39,7 +41,8 @@ import {
     MatTooltipModule,
     MatCardModule,
     MatBottomSheetModule,
-    MatMenuModule
+    MatMenuModule,
+    MatListModule
   ]
 })
 export class MaterailModule { }
